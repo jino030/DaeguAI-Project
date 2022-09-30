@@ -1,3 +1,54 @@
 * {
     font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
 }
+a {color: #000;}
+
+header {position: relative;}
+header .main-nav-bg {
+    position: fixed;
+    background-color: mediumaquamarine; 
+    width: 100vw; 
+    height: 80px;
+}
+header .nav-gnb-wrap {
+    margin: 0 auto;
+    width: 75vw; 
+    height: 80px;
+}
+header .nav-gnb {
+    display: flex;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    width: 75vw; 
+    height: 80px;
+    border: 1px solid #000; 
+    box-sizing: border-box; 
+}
+header .nav-gnb .main-logo, .main-logo>img {
+    width: 133px;
+    height: 30px;
+}
+header .nav-gnb .gnb-menu {
+    padding-left: 36.718vw;
+    height: 80px;
+}
+header .nav-gnb .gnb-menu span {
+    display: inline-block;
+    line-height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+header .nav-gnb .gnb-menu .business span {
+    padding: 0 60px;
+}
+header .nav-gnb .ham {
+    position: absolute;
+    right: 0;
+}
+
+
+
+.test{height: 9000px;}
