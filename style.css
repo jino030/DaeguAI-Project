@@ -29,7 +29,7 @@ header #main-nav-bg {
     border-bottom: 1px solid #FFFFFF;
     /* background-color: red; */
 }
-header #nav-gnb-wrap {
+header #main-nav-wrap {
     margin: 0 auto;
     max-width: 1440px;
     width: 75vw; 
@@ -56,7 +56,7 @@ header .nav-gnb .gnb-menu {
     max-width: 1047px;
     width: 100%;
     height: 80px;
-    margin-right: 108px;
+    margin-right: 228px;
 }
 header .nav-gnb .gnb-menu .menu-wrap {
     position: absolute;
@@ -74,14 +74,60 @@ header .nav-gnb .gnb-menu .menu-wrap .business span {
     padding: 0 60px;
 }
 header .nav-gnb .ham {
+    width: 32px;
     position: absolute;
     right: 0;
 }
 
 /* ========================== 메뉴 더보기 ========================== */
+.nav-lnb {
+    width: 100vw;
+    height: 300px;
+    background-color: #184B9F;
+    display: none;
+}
+.nav-lnb .lnb-menu {
+    position: relative;
+    display: flex;
+    max-width: 1440px;
+    width: 75vw;
+    height: 100%;
+    margin: 0 auto;
+}
+.nav-lnb .lnb-menu .left-space {
+    width: 133px;
+    height: 100%;
+    /* background-color: yellow; */
+}
+.nav-lnb .lnb-menu .lnb-menu-wrap {
+    position: relative;
+    width: 1103px;
+    height: 100%;
+    margin-right: 172px;
+    /* background-color: gray; */
+}
+.nav-lnb .lnb-menu .lnb-menu-list-wrap {
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+.nav-lnb .lnb-menu .lnb-menu-list {
+    width: 100px;
+    height: 150px;
+    padding-top: 40px;
+    padding-right: 30px;
+    /* background-color: mintcream; */
+}
+.nav-lnb .lnb-menu .lnb-menu-list li {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.test-list {
+    display: none;
 
-
-
+}
 
 
 

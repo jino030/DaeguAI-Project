@@ -38,3 +38,15 @@ $(function(){
         // ]
     });
 });
+
+
+
+$(".ham").click(function () {
+    if ($(".nav-lnb").hasClass("active")) {
+      $(".nav-lnb").css({"display": "none","opacity":"0"});
+      $(".nav-lnb").removeClass("active");
+    } else {
+      $(".nav-lnb").addClass("active");
+      $(".nav-lnb").css({"display": "block", "opacity":"1"});
+    }
+  });
