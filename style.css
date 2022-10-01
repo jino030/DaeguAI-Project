@@ -4,26 +4,45 @@
 }
 a {color: #000;}
 
-header {position: relative;}
-header .main-nav-bg {
+header {
+    position: relative;
+    width: 100vw;
+    height: 900px;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+/* ========================== main 네비게이션바 ========================== */
+header nav {
     position: fixed;
-    background-color: mediumaquamarine; 
+    z-index: 100;
+    width: 100%;
+    /* height: 100%; */
+}
+header #main-nav-bg {
+    position: fixed;
+    top: 0;
     width: 100vw; 
     height: 80px;
+    border-bottom: 1px solid #FFFFFF;
+    /* background-color: red; */
 }
-header .nav-gnb-wrap {
+header #nav-gnb-wrap {
     margin: 0 auto;
+    max-width: 1440px;
     width: 75vw; 
     height: 80px;
+    /* background-color: red; */
 }
 header .nav-gnb {
     display: flex;
     align-items: center;
     position: fixed; 
     top: 0; 
+    max-width: 1440px;
     width: 75vw; 
     height: 80px;
-    border: 1px solid #000; 
+    /* border: 1px solid #000;  */
     box-sizing: border-box; 
 }
 header .nav-gnb .main-logo, .main-logo>img {
@@ -31,23 +50,85 @@ header .nav-gnb .main-logo, .main-logo>img {
     height: 30px;
 }
 header .nav-gnb .gnb-menu {
-    padding-left: 36.718vw;
+    position: relative;
+    max-width: 1047px;
+    width: 100%;
     height: 80px;
+    margin-right: 108px;
 }
-header .nav-gnb .gnb-menu span {
+header .nav-gnb .gnb-menu .menu-wrap {
+    position: absolute;
+    right: 0;
+}
+header .nav-gnb .gnb-menu .menu-wrap span {
     display: inline-block;
     line-height: 80px;
     font-size: 20px;
     font-weight: bold;
     color: #FFFFFF;
 }
-header .nav-gnb .gnb-menu .business span {
+header .nav-gnb .gnb-menu .menu-wrap .business span {
+    /* width: 194px; */
     padding: 0 60px;
 }
 header .nav-gnb .ham {
     position: absolute;
     right: 0;
 }
+
+/* ========================== 메뉴 더보기 ========================== */
+
+
+
+
+
+
+
+/* ========================== 메인 슬라이더 배경이미지 ========================== */
+.main-slider-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 900px;
+    z-index: 1;
+    /* background-color: blue; */
+
+}
+.main-slider-bg .main-slider {
+    width: 100%;
+    height: 900px;
+    /* background-color: gray; */
+}
+.main-slider-bg .main-slider .slider-img-wrap {
+    width: 100%;
+    height: 900px;
+}
+
+.main-slider-bg .main-slider .slider-img-1 {
+    background: url(./img/main/main-bg-1.png) center center no-repeat, rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-blend-mode: hard-light;
+}
+.main-slider-bg .main-slider .slider-img-2 {
+    background: url(./img/main/main-bg-2.png) center center no-repeat, rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-blend-mode: hard-light;
+}
+.main-slider-bg .main-slider .slider-img-3 {
+    background: url(./img/main/main-bg-3.png) center center no-repeat, rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-blend-mode: hard-light;
+}
+.main-slider-bg .main-slider .slider-img-wrap .bg-color {
+    width: 100%;
+    height: 900px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-slider-bg p
+
+
+
 
 
 

@@ -12,26 +12,54 @@
     <!-- css 연결 -->
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <!-- 슬릭슬라이더 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="./slick.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     
     <header>
-        <div class="main-nav-bg"></div>
-        <div class="nav-gnb-wrap">
-            <div class="nav-gnb">
-                <a href="./index.html" class="main-logo"><img src="./img/main/resoft-mainlogo.svg" alt="mainLogo"></a>
-                <div class="gnb-menu">
-                    <a href="#" class="company"><span>회사소개</span></a>
-                    <a href="#" class="business"><span>사업현황</span></a>
-                    <a href="#" class="yard"><span>정보마당</span></a>
+        <nav>
+            <!-- 메인 네비게이션 -->
+            <div id="main-nav-bg"></div>
+            <div id="nav-gnb-wrap">
+                <div class="nav-gnb">
+                    <a href="./index.html" class="main-logo"><img src="./img/main/resoft-mainlogo.svg" alt="mainLogo"></a>
+                    <div class="gnb-menu">
+                        <div class="menu-wrap">
+                            <a href="#" class="company"><span>회사소개</span></a>
+                            <a href="#" class="business"><span>사업현황</span></a>
+                            <a href="#" class="yard"><span>정보마당</span></a>
+                        </div>
+                    </div>
+                    <img src="./img/main/ham.svg" alt="menuPlus" class="ham">
                 </div>
-                <img src="./img/main/ham.svg" alt="menuPlus" class="ham">
             </div>
-        </div>
-        <div class="nav-lnb"></div>
+            
+            <!-- 메뉴 더보기 -->
+            <div class="nav-lnb">
 
+            </div>
+        </nav>
+
+        <!-- 메인 슬라이더 이미지 -->
+        <div class="main-slider-bg">
+            <div class="main-slider">
+                <div class="slider-img-wrap slider-img-1"><div class="bg-color"></div></div>
+                <div class="slider-img-wrap slider-img-2"><div class="bg-color"></div></div>
+                <div class="slider-img-wrap slider-img-3"><div class="bg-color"></div></div>
+            </div>
+            <p>Evolution With New Software</p>
+            <p>Mobil APP(Android/iOS) Development, AI Bigdata Analysis, MetaVerse, 
+                Responsive WEBsite, Brand Design Launch, ICT Consulting</p>
+        </div>
+        
 
     </header>
+
+
     <div class="test"></div>
 
 
