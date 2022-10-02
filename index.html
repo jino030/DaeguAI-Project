@@ -12,34 +12,42 @@
     <!-- css 연결 -->
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <!-- 와우 애니메이션 연결 -->
+    <link rel="stylesheet" href="./animate.css">
+    <script src="./wow.min.js"></script>
     <!-- 슬릭슬라이더 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="./slick.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>history.scrollRestoration = "manual"</script>
 </head>
 <body>
-    
-    <header>
+    <!-- 와우 js 연결 -->
+    <script>
+        new WOW().init();
+    </script>        
+
+    <header id="header">
         <nav>
             <!-- 메인 네비게이션 -->
-            <div id="main-nav-bg"></div>
+            <div id="main-nav-bg" class="scroll-color"></div>
             <div id="main-nav-wrap">
                 <div class="nav-gnb">
-                    <a href="./index.html" class="main-logo"><img src="./img/main/resoft-mainlogo.svg" alt="mainLogo"></a>
+                    <a href="#header" class="main-logo"><img src="./img/main/resoft-mainlogo-white.png" alt="mainLogo" id="main-logo-color"></a>
                     <div class="gnb-menu">
                         <div class="menu-wrap">
-                            <a href="#" class="company"><span>회사소개</span></a>
-                            <a href="#" class="business"><span>사업현황</span></a>
-                            <a href="#" class="yard"><span>정보마당</span></a>
+                            <a href="#" class="company"><span class="main-menu">회사소개</span></a>
+                            <a href="#" class="business"><span class="main-menu">사업현황</span></a>
+                            <a href="#" class="yard"><span class="main-menu">정보마당</span></a>
                         </div>
                     </div>
-                    <img src="./img/main/ham.svg" alt="menuPlus" class="ham">
+                    <img src="./img/main/ham.svg" alt="menuPlus" class="ham ham-black">
                 </div>
 
             </div>
             <!-- 메뉴 더보기 -->
-            <div class="nav-lnb">
+            <div class="nav-lnb" >
                 <div class="lnb-menu">
                     <div class="left-space"></div>
                     <div class="lnb-menu-wrap">
@@ -72,9 +80,18 @@
                 <div class="slider-img-wrap slider-img-2"><div class="bg-color"></div></div>
                 <div class="slider-img-wrap slider-img-3"><div class="bg-color"></div></div>
             </div>
-            <p>Evolution With New Software</p>
-            <p>Mobil APP(Android/iOS) Development, AI Bigdata Analysis, MetaVerse, 
-                Responsive WEBsite, Brand Design Launch, ICT Consulting</p>
+            <div class="main-slider-text">
+                <p>Evolution With New Software</p>
+                <p>Mobil APP(Android/iOS) Development, AI Bigdata Analysis, MetaVerse, 
+                    Responsive WEBsite, Brand Design Launch, ICT Consulting</p>
+                <div class="slider-button-wrap">
+                    <img src="./img/main/Icon ionic-ios-arrow-round-back.svg" alt="prevArrow" class="prev-arrow">
+                    <img src="./img/main/pause.svg" alt="play" class="pause-button">
+                    <img src="./img/main/play.svg" alt="pause" class="play-button">
+                    <img src="./img/main/Icon ionic-ios-arrow-round-back-1.svg" alt="nextArrow" class="next-arrow">
+                </div>
+            </div>
+
         </div>
         
 
@@ -94,6 +111,7 @@
         <lottie-player src="./img/main/animations/lf20_4bfhlker.json" background="transparent" style="width: 680px; height: 680px;" speed="1" loop autoplay>
         </lottie-player>
     </div>
+
 
     <!-- js 연결 -->
     <script src="./script.js"></script>

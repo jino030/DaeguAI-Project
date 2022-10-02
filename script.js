@@ -1,3 +1,50 @@
+$(function(){ history.scrollRestoration = "menual"});
+
+// 스크롤 이벤트
+
+$(window).ready(function(){
+  var scrollNav = 0;
+  $(window).scroll(function(){
+    scrollNav = $(this).scrollTop();
+    if(scrollNav > 50) {
+      $('.scroll-color').css({'background-color':'#fff'});
+      $('.main-menu').css({'color':'#000'});
+      $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo.svg");
+      $('.ham-black').attr('src',"./img/main/ham-black.svg");
+    } else if(0 < scrollNav < 50) {
+      $('.scroll-color').css({'background-color':'rgba(0,0,0,0)'});
+      $('.main-menu').css({'color':'#fff'});
+      $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo-white.png");
+      $('.ham-black').attr('src',"./img/main/ham.svg");
+    }
+  });
+});
+
+// 더보기 메뉴 나타나기
+$(".ham").click(function () {
+  if ($(".nav-lnb").hasClass("active")) {
+    $(".nav-lnb").css({"display": "none","background-color":"rgba(0,0,0,0)"});
+    $(".nav-lnb").removeClass("active");
+  } else {
+    $(".nav-lnb").addClass("active");
+    $(".nav-lnb").css({"display": "block","background-color":"#184B9F"});
+    $('.scroll-color').css({'background-color':'#fff'});
+    $('.main-menu').css({'color':'#000'});
+    $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo.svg");
+    $('.ham').attr('src',"./img/main/ham-black.svg");
+  }
+
+  // 더보기 메뉴가 펼쳐진채로 스크롤했을 때 사라지도록
+  $(document).scroll(function(){
+    scrollNav = $(this).scrollTop();
+  if(scrollNav > 0) {
+    $(".nav-lnb").removeClass("active");
+    $(".nav-lnb").css({"display": "none","background-color":"rgba(0,0,0,0)"});
+  }});
+});
+
+
+
 // 메인화면 슬릭슬라이더
 $(function(){
     $(".main-slider").slick({
@@ -12,8 +59,8 @@ $(function(){
         autoplaySpeed : 2000,           // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
         pauseOnHover : true,            // 슬라이드 이동 시 마우스 호버하면 슬라이더 멈추게 설정
         vertical : false,               // 세로 방향 슬라이드 옵션
-        prevArrow : false,              // 이전 버튼
-        nextArrow : false,              // 다음 버튼
+        prevArrow : ".prev-arrow",      // 이전 버튼
+        nextArrow : ".next-arrow",      // 다음 버튼
         draggable : true,               // 드래그 가능 여부
         
         // 반응형 웹 구현 옵션
@@ -39,14 +86,18 @@ $(function(){
     });
 });
 
-
-
-$(".ham").click(function () {
-    if ($(".nav-lnb").hasClass("active")) {
-      $(".nav-lnb").css({"display": "none","opacity":"0"});
-      $(".nav-lnb").removeClass("active");
-    } else {
-      $(".nav-lnb").addClass("active");
-      $(".nav-lnb").css({"display": "block", "opacity":"1"});
-    }
+// 슬라이더 재생/정지 버튼
+$(function(){
+  $('.play-button').on('click', function(){
+    $('.main-slider').slick('slickPause');
+    $('.play-button').css({'display':'none'});
+    $('.pause-button').css({'display':'inline-block'})
   });
+
+  $('.pause-button').on('click', function(){
+    $('.main-slider').slick('slickPlay');
+    $('.play-button').css({'display':'inline-block'});
+    $('.pause-button').css({'display':'none'})
+  });
+});
+
