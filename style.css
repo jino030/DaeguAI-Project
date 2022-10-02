@@ -29,6 +29,10 @@ header #main-nav-bg {
     height: 80px;
     border-bottom: 1px solid #FFFFFF;
     /* background-color: grey; */
+    transition: all .35s;
+}
+nav.sticky #main-nav-bg {
+    background-color: #fff;
 }
 header #main-nav-wrap {
     margin: 0 auto;
@@ -70,6 +74,9 @@ header .nav-gnb .gnb-menu .menu-wrap .main-menu {
     font-weight: bold;
     color: #FFFFFF;
 }
+nav.sticky #main-menu-color .main-menu {
+    color: #000000;
+}
 header .nav-gnb .gnb-menu .menu-wrap .business span {
     /* width: 194px; */
     padding: 0 60px;
@@ -87,6 +94,7 @@ header .nav-gnb .ham {
     height: 300px;
     background-color: #184B9F;
     display: none;
+    transition: all .35s;
 }
 .nav-lnb .lnb-menu {
     position: relative;

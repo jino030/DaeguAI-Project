@@ -1,46 +1,42 @@
-$(function(){ history.scrollRestoration = "menual"});
+$(function(){ history.scrollRestoration = "auto"});
 
 // 스크롤 이벤트
-
-$(window).ready(function(){
-  var scrollNav = 0;
-  $(window).scroll(function(){
-    scrollNav = $(this).scrollTop();
-    if(scrollNav > 50) {
-      $('.scroll-color').css({'background-color':'#fff'});
-      $('.main-menu').css({'color':'#000'});
-      $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo.svg");
-      $('.ham-black').attr('src',"./img/main/ham-black.svg");
-    } else if(0 < scrollNav < 50) {
-      $('.scroll-color').css({'background-color':'rgba(0,0,0,0)'});
-      $('.main-menu').css({'color':'#fff'});
-      $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo-white.png");
-      $('.ham-black').attr('src',"./img/main/ham.svg");
-    }
-  });
+var scrollNav = $('nav');
+$(window).scroll(function(){
+  if($(this).scrollTop() > 0){
+    scrollNav.addClass('sticky');
+    $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo.svg");
+    $('.ham-black').attr('src',"./img/main/ham-black.svg");
+  } else{
+    scrollNav.removeClass('sticky');
+    $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo-white.png");
+    $('.ham-black').attr('src',"./img/main/ham.svg");
+  }
 });
 
+
 // 더보기 메뉴 나타나기
+
 $(".ham").click(function () {
-  if ($(".nav-lnb").hasClass("active")) {
+  if ($(".ham").hasClass("active")) {
     $(".nav-lnb").css({"display": "none","background-color":"rgba(0,0,0,0)"});
-    $(".nav-lnb").removeClass("active");
+    $(".ham").removeClass("active");
   } else {
-    $(".nav-lnb").addClass("active");
+    $(".ham").addClass("active");
     $(".nav-lnb").css({"display": "block","background-color":"#184B9F"});
-    $('.scroll-color').css({'background-color':'#fff'});
-    $('.main-menu').css({'color':'#000'});
-    $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo.svg");
-    $('.ham').attr('src',"./img/main/ham-black.svg");
+    // $('.scroll-color').css({'background-color':'#fff'});
+    // $('.main-menu').css({'color':'#000'});
+    // $('#main-logo-color').attr('src',"./img/main/resoft-mainlogo.svg");
+    // $('.ham').attr('src',"./img/main/ham-black.svg");
   }
 
   // 더보기 메뉴가 펼쳐진채로 스크롤했을 때 사라지도록
-  $(document).scroll(function(){
-    scrollNav = $(this).scrollTop();
-  if(scrollNav > 0) {
-    $(".nav-lnb").removeClass("active");
-    $(".nav-lnb").css({"display": "none","background-color":"rgba(0,0,0,0)"});
-  }});
+  // $(document).scroll(function(){
+  //   scrollNav = $(this).scrollTop();
+  // if(scrollNav > 0) {
+  //   $(".nav-lnb").removeClass("active");
+  //   $(".nav-lnb").css({"display": "none","background-color":"rgba(0,0,0,0)"});
+  // }});
 });
 
 
