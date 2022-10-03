@@ -70,17 +70,39 @@ header .nav-gnb .gnb-menu .menu-wrap {
 }
 header .nav-gnb .gnb-menu .menu-wrap .main-menu {
     display: inline-block;
+    width: 74px;
     line-height: 80px;
     font-size: 20px;
     font-weight: bold;
     color: #FFFFFF;
+    text-align: center;
 }
 nav.sticky #main-menu-color .main-menu {
     color: #000000;
 }
+
+.menu-wrap .company, .business, .yard{
+    position: relative;
+    /* background-color: green; */
+    padding-bottom: 10px;
+    width: 74px;
+}
+.underline {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    width: 74px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    transition: all .25s ease-in-out;
+}
+.company:hover::after, .business:hover::after, .yard:hover::after {content: "";}
+.company:hover .underline, .business:hover .underline, .yard:hover .underline {background-color: #184B9F;}
+
 header .nav-gnb .gnb-menu .menu-wrap .business span {
     /* width: 194px; */
-    padding: 0 60px;
+    margin: 0 60px;
 }
 header .nav-gnb .ham {
     width: 32px;
@@ -126,7 +148,7 @@ nav.show .nav-lnb {
     display: flex;
 }
 .nav-lnb .lnb-menu .lnb-menu-list {
-    width: 105px;
+    width: 106px;
     height: 150px;
     padding-top: 40px;
     padding-right: 30px;
