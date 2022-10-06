@@ -70,6 +70,7 @@ header .nav-gnb .gnb-menu .menu-wrap {
     position: absolute;
     right: 0;
 }
+
 header .nav-gnb .gnb-menu .menu-wrap .main-menu {
     display: inline-block;
     line-height: 80px;
@@ -87,12 +88,13 @@ nav.sticky #main-menu-color .main-menu {
     /* background-color: green; */
     padding-bottom: 10px;
     width: 74px;
+    margin-left: 60px;
 }
 .underline {
     position: absolute;
     bottom: 0;
     display: inline-block;
-    width: 69.2px;
+    width: 100%;
     height: 6px;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 30px;
@@ -101,10 +103,6 @@ nav.sticky #main-menu-color .main-menu {
 .company:hover::after, .business:hover::after, .yard:hover::after {content: "";}
 .company:hover .underline, .business:hover .underline, .yard:hover .underline {background-color: #184B9F;}
 
-header .nav-gnb .gnb-menu .menu-wrap .business span {
-    /* width: 194px; */
-    margin: 0 60px;
-}
 header .nav-gnb .ham {
     width: 32px;
     position: absolute;
