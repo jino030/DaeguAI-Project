@@ -61,10 +61,10 @@ header .nav-gnb .main-logo, .main-logo>img {
 }
 header .nav-gnb .gnb-menu {
     position: relative;
-    max-width: 1047px;
+    max-width: 1167px;
     width: 100%;
     height: 80px;
-    margin-right: 228px;
+    margin-right: 108px;
 }
 header .nav-gnb .gnb-menu .menu-wrap {
     position: absolute;
